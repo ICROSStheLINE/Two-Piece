@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Glorp
+  - HealthBar
+  - PlayerShieldHitbox
+  - AggroRange
+  - Shlorp
+  - Floor or Wall
+  - ShlorpSoulLaserBeam
+  - Truth Seeking Orb
+  - Ice Arena Fighting Zone
+  - Ice Boss
+  - Ice Boss Head
+  - Ice Boss Jaw
+  - Checkpoint
+  - Dialogue
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Giga Background
+    uniqueID: 4113425527
+    locked: 0
+  - name: Background
+    uniqueID: 3451913825
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor & Walls
+    uniqueID: 458849331
+    locked: 0
+  - name: Foreground
+    uniqueID: 118276667
+    locked: 0
+  - name: Truth Seeking Orb
+    uniqueID: 3216040755
+    locked: 0

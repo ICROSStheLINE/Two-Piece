@@ -1,0 +1,699 @@
+fileFormatVersion: 2
+guid: 12d31165084567f40b3d9c482312d245
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742e1812912559944a7b5e88ae6f80f9
+      internalID: -2143422900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace2770384b47840b92fbdf4b851181
+      internalID: 2035353107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5581ac52c05100147adfa38499752963
+      internalID: 921050143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ffd11702322264799675cf62a085d1
+      internalID: 1727172853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f335ba8f2fe44124fbaffe9f9cb23562
+      internalID: 105292547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df5e2bad45d287439a66df1a7f14eb5
+      internalID: 1983317207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3caf65da566504d4a9e60fb75929e786
+      internalID: -270320875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_7
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8f857171faea74dbf8fcc6dfe39535
+      internalID: -903475682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945a7564f348cdf4cbd1233473032a9b
+      internalID: -1754619887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d515438d51fc31346a373dac030a2623
+      internalID: -1488685086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_10
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5979f4e000ee046ab8d00534b70a7e
+      internalID: 1748247866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6b84fdb8b18a94484ac912af53b60c
+      internalID: -1397650133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_12
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b0c1dbdccafd04a88d0564e9189fb2
+      internalID: 1802372903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6f42c9e1e0614e86556af55d49528
+      internalID: -1053598357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_14
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a27ab5e8e3a7048a1355bbb4f18b13
+      internalID: 2019628533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_15
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881fcf27f98358e4088ed165baf680e9
+      internalID: -1925156956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba4be8f7870774489abc09b327e82dd
+      internalID: 1420485975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_17
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70593b9d0440f6145aacdc61e0bd51ac
+      internalID: -1858739268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc528c3ae71d20489d4faf579a022d9
+      internalID: -1799910550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_19
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165e817ae54fee64e952c1ed4630d237
+      internalID: 1957840913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060350597fc948c4581db2a2d5a7c238
+      internalID: 898347787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_21
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701babd943ada8a479f929431d0dde05
+      internalID: -464771979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_22
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297e6535643bd564287c1454997abf91
+      internalID: -246843329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_23
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd4676afc163004487b83170f3403b5
+      internalID: -768743237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75be63c49cc90a4ea8fbaa94a5c9243
+      internalID: -1088652503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyLeechBlastText_25
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 0
+        width: 25.038462
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9acfdfb5a22fdc4382a77b37e623949
+      internalID: 1928211087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BuffyLeechBlastText_0: -2143422900
+      BuffyLeechBlastText_1: 2035353107
+      BuffyLeechBlastText_10: 1748247866
+      BuffyLeechBlastText_11: -1397650133
+      BuffyLeechBlastText_12: 1802372903
+      BuffyLeechBlastText_13: -1053598357
+      BuffyLeechBlastText_14: 2019628533
+      BuffyLeechBlastText_15: -1925156956
+      BuffyLeechBlastText_16: 1420485975
+      BuffyLeechBlastText_17: -1858739268
+      BuffyLeechBlastText_18: -1799910550
+      BuffyLeechBlastText_19: 1957840913
+      BuffyLeechBlastText_2: 921050143
+      BuffyLeechBlastText_20: 898347787
+      BuffyLeechBlastText_21: -464771979
+      BuffyLeechBlastText_22: -246843329
+      BuffyLeechBlastText_23: -768743237
+      BuffyLeechBlastText_24: -1088652503
+      BuffyLeechBlastText_25: 1928211087
+      BuffyLeechBlastText_3: 1727172853
+      BuffyLeechBlastText_4: 105292547
+      BuffyLeechBlastText_5: 1983317207
+      BuffyLeechBlastText_6: -270320875
+      BuffyLeechBlastText_7: -903475682
+      BuffyLeechBlastText_8: -1754619887
+      BuffyLeechBlastText_9: -1488685086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
