@@ -35,15 +35,15 @@ public class BuffyGravityFlip : MonoBehaviour
 
 	void GravityInverse()
 	{
-		rb.gravityScale *= -100;
+		Ray ray = new Ray(transform.position, Vector3.up);
+        RaycastHit hit;
+		if (Physics.Raycast(ray, out hit, 30f, LayerMask.GetMask("Floor or Wall")))
+        {
+            transform.position = hit.point;
+        }
+		rb.gravityScale *= -1;
 		gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x,gameObject.transform.localScale.y * -1,gameObject.transform.localScale.z);
 		spriteRenderer.flipY = !spriteRenderer.flipY;
-		Invoke("GravityReset", 0.1f);
-	}
-
-	void GravityReset()
-	{
-		rb.gravityScale /= 100;
 	}
 
 	void ResetCooldown()
