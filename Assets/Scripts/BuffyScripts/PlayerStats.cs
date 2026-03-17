@@ -141,6 +141,7 @@ public class PlayerStats : MonoBehaviour
 			if (i != GetComponent<PlayerStats>())
 			{
 				i.CancelInvoke();
+				i.StopAllCoroutines();
 				i.enabled = false;
 			}
 		}

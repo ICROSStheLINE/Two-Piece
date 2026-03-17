@@ -60,6 +60,7 @@ public class SaveData : MonoBehaviour
 		string positionData = System.IO.File.ReadAllText(filePath);
 		
 		playerPosition = JsonUtility.FromJson<PlayerPosition>(positionData);
+		//Debug.Log(filePath);
 		//Debug.Log("Save Loaded");
 		
 		transform.position = new Vector3(playerPosition.xPosition, playerPosition.yPosition, playerPosition.zPosition);
