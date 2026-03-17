@@ -14,6 +14,7 @@ public class PlayerTeleporting : MonoBehaviour
 	static readonly float animationFrames = 13f;
 	static readonly float teleportFrame = 9f;
 	static readonly float secondsUntilTeleport = (teleportFrame / animationFrames) * animationDuration;
+	static readonly float secondsBetweenTeleportAndEnd = animationDuration - secondsUntilTeleport;
 	
 	//[HideInInspector] public bool playerStats.playerMidTeleport = false;
 	[SerializeField] float teleportDistance;
@@ -23,6 +24,9 @@ public class PlayerTeleporting : MonoBehaviour
 	GameObject teleportIndicator;
 	Color purple = new Color(0.688f,0f,1f,1f);
 	Color red = new Color(1f,0f,0f,1f);
+	
+	[SerializeField] GameObject teleportSpriteMaskPrefab;
+	GameObject teleportSpriteMask;
 	
 	
     void Start()
@@ -35,7 +39,7 @@ public class PlayerTeleporting : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(playerStats.teleportKey))
+        if (Input.GetKey(playerStats.teleportKey)) // If holding the teleport button
 		{
 			if (!playerStats.playerMidActionNoDash && !playerStats.midCutscene)
 			{
@@ -78,18 +82,11 @@ public class PlayerTeleporting : MonoBehaviour
 				teleportHeight = 0;
 			}
 		}
-		else if (playerStats.playerQueuingTeleport)
+		else if (playerStats.playerQueuingTeleport) // If they let go of the teleport button
 		{
 			if (teleportIndicator.GetComponent<SpriteRenderer>().color == purple)
 			{
-				playerStats.playerQueuingTeleport = false;
-			
-				playerStats.playerCanDash = false;
-				playerStats.ResetPlayerDashCooldown();
-				playerStats.playerMidTeleport = true;
-				playerStats.playerCanMove = false;
-				Invoke("Teleport", secondsUntilTeleport);
-				Invoke("ResetCooldown", animationDuration);
+				StartCoroutine("Teleport");
 			}
 			else
 				RemoveIndicator();
@@ -101,8 +98,7 @@ public class PlayerTeleporting : MonoBehaviour
 				// This if statement exists because there's a small bug where someone can teleport when they're not supposed to.
 				// This happens when the player turns while having the indicator out.
 				// If the indicator is purple before they turned, the indicator will be purple for a split second before turning red (if it's supposed to).
-				CancelInvoke("Teleport");
-				CancelInvoke("ResetCooldown");
+				StopCoroutine("Teleport");
 				ResetCooldown();
 				RemoveIndicator();
 			}
@@ -111,13 +107,30 @@ public class PlayerTeleporting : MonoBehaviour
 		anim.SetBool("isTeleporting", playerStats.playerMidTeleport);
     }
 
-	void Teleport()
+	IEnumerator Teleport()
 	{
+		playerStats.playerQueuingTeleport = false;
+		playerStats.playerCanDash = false;
+		playerStats.ResetPlayerDashCooldown();
+		playerStats.playerMidTeleport = true;
+		playerStats.playerCanMove = false;
+		
+		teleportSpriteMask = Instantiate(teleportSpriteMaskPrefab, transform.position, transform.rotation);
+		teleportSpriteMask.transform.parent = gameObject.transform;
+		playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+		
+		yield return new WaitForSeconds(secondsUntilTeleport);
+		
+		playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.None;
+		Destroy(teleportSpriteMask);
+		
 		transform.position = teleportIndicator.transform.position;
 		rb.velocity = new Vector2(Mathf.Abs(teleportHeight)/2 * Mathf.Sign(transform.localScale.x),teleportHeight * 5);
 		RemoveIndicator();
-		/*rb.position = rb.position + new Vector2(teleportDistance * Mathf.Sign(gameObject.transform.localScale.x), 0);
-		gameObject.transform.position = gameObject.transform.position + new Vector3(5 * Mathf.Sign(gameObject.transform.localScale.x),0,0);*/
+		
+		yield return new WaitForSeconds(secondsBetweenTeleportAndEnd);
+		
+		ResetCooldown();
 	}
 
 	void ResetCooldown()
@@ -134,5 +147,14 @@ public class PlayerTeleporting : MonoBehaviour
 		playerStats.playerQueuingTeleport = false;
 		
 		playerSpriteRenderer.color = new Color(1f,1f,1f,1f);
+	}
+	
+	IEnumerator SpriteMaskAnimation()
+	{
+		// The SpriteMask should try to follow the teleport effect animation
+		// How should I code that? 
+		// Should I just eyeball it and hardcode its localScale shrinking?
+		// MAYBE I should take the secondsUntilTeleport variable and have it linearly shrink until it hits 0 at the secondsUntilTeleport mark
+		
 	}
 }
