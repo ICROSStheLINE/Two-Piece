@@ -155,6 +155,6 @@ public class PlayerTeleporting : MonoBehaviour
 		// How should I code that? 
 		// Should I just eyeball it and hardcode its localScale shrinking?
 		// MAYBE I should take the secondsUntilTeleport variable and have it linearly shrink until it hits 0 at the secondsUntilTeleport mark
-		
+		yield return new WaitForSeconds(0f);
 	}
 }
