@@ -256,90 +256,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BuffyTeleportEffect_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 401456611f904304d8e7ec2fe52e35e5
-      internalID: 87509442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BuffyTeleportEffect_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05da79f6fe2cc134bb411ba8b8635178
-      internalID: -1172228445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BuffyTeleportEffect_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72742ccd016f0dd44bf2ac0b7daeeb08
-      internalID: 2053409992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BuffyTeleportEffect_10
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e1d5d14cc5ea3d4281e8f17ae929a57
-      internalID: -1170088823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -353,15 +269,11 @@ TextureImporter:
     nameFileIdTable:
       BuffyTeleportEffect_0: -1826796058
       BuffyTeleportEffect_1: -547295338
-      BuffyTeleportEffect_10: -1170088823
       BuffyTeleportEffect_2: -764191975
       BuffyTeleportEffect_3: 1542407172
       BuffyTeleportEffect_4: 572493663
       BuffyTeleportEffect_5: 1614161815
       BuffyTeleportEffect_6: 2020024207
-      BuffyTeleportEffect_7: 87509442
-      BuffyTeleportEffect_8: -1172228445
-      BuffyTeleportEffect_9: 2053409992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

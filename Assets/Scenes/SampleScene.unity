@@ -11932,6 +11932,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729455698978224878, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
+      propertyPath: teleportEffectPrefab
+      value: 
+      objectReference: {fileID: 2873568763145861955, guid: f0ab6ed851e29eb40b293876bd94bcbe, type: 3}
+    - target: {fileID: 2729455698978224878, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
       propertyPath: teleportSpriteMaskPrefab
       value: 
       objectReference: {fileID: 165071023648927547, guid: 359db122a4ce054478d12ec072a14175, type: 3}

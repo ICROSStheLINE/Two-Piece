@@ -51,7 +51,6 @@ public class BuffyGravityFlip : MonoBehaviour
 		playerStats.IgnoreEnemyCollisions(false);
 		playerStats.playerMidGravityShift = false;
 		anim.SetBool("isGravityShifting", false);
-		spriteRenderer.flipY = !spriteRenderer.flipY;
 		playerStats.playerCanMove = true;
 		playerStats.playerCanDash = true;
 	}
@@ -66,6 +65,5 @@ public class BuffyGravityFlip : MonoBehaviour
         }
 		rb.gravityScale *= -1;
 		gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x,gameObject.transform.localScale.y * -1,gameObject.transform.localScale.z);
-		spriteRenderer.flipY = !spriteRenderer.flipY;
 	}
 }

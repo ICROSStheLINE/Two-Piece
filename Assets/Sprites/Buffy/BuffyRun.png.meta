@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 18f7869d93257574594bcd178e063f9e
+guid: ab2cf03aa73374e43b82782670044e3c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BuffyTeleport_0
+      name: BuffyRun_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d5256ea69f68504a94029b9def46c72
-      internalID: 244574886
+      spriteID: 6800d0e0ec7be0f40aaad374139480a6
+      internalID: 410340113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyTeleport_1
+      name: BuffyRun_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de014caf28868694691f2749a12c5641
-      internalID: 742839391
+      spriteID: cce1be9af1504ac45b11e1e23dd589a8
+      internalID: 807054329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyTeleport_2
+      name: BuffyRun_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0d45a12d6dc424f887e93598f3f8bb
-      internalID: 933890036
+      spriteID: 0a2fcc6344a1fef4693204e6b3a4ecc1
+      internalID: -1724025951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyTeleport_3
+      name: BuffyRun_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f06e6b8fd57d6949ae54ac2c87d2c5a
-      internalID: -187790578
+      spriteID: 943c681d774c3a040ac24487a3a960cc
+      internalID: 1669067656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyTeleport_4
+      name: BuffyRun_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,8 +208,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e84ef020f611c2147805c8ab917485de
-      internalID: -1660517501
+      spriteID: dcd8906a9cc334e4799426d3227e6f6b
+      internalID: -632803223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuffyRun_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17029e9ea827a1e44bdec85215d6fd01
+      internalID: -1072585566
       vertices: []
       indices: 
       edges: []
@@ -225,11 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BuffyTeleport_0: 244574886
-      BuffyTeleport_1: 742839391
-      BuffyTeleport_2: 933890036
-      BuffyTeleport_3: -187790578
-      BuffyTeleport_4: -1660517501
+      BuffyRun_0: 410340113
+      BuffyRun_1: 807054329
+      BuffyRun_2: -1724025951
+      BuffyRun_3: 1669067656
+      BuffyRun_4: -632803223
+      BuffyRun_5: -1072585566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,12 +9,16 @@ public class PlayerTeleporting : MonoBehaviour
 	PlayerStats playerStats;
 	SpriteRenderer playerSpriteRenderer;
 	
-	static readonly float animationDurationSpeedMultiplier = 1.5f;
-	static readonly float animationDuration = 1.083f / animationDurationSpeedMultiplier;
-	static readonly float animationFrames = 13f;
-	static readonly float teleportFrame = 9f;
-	static readonly float secondsUntilTeleport = (teleportFrame / animationFrames) * animationDuration;
-	static readonly float secondsBetweenTeleportAndEnd = animationDuration - secondsUntilTeleport;
+	static readonly float teleportInDurationSpeedMultiplier = 1.5f;
+	static readonly float teleportInDuration = 0.583f / teleportInDurationSpeedMultiplier;
+	static readonly float teleportInFrames = 7f;
+	
+	static readonly float teleportOutDurationSpeedMultiplier = 1.5f;
+	static readonly float teleportOutDuration = 0.417f / teleportOutDurationSpeedMultiplier;
+	static readonly float teleportOutFrames = 5f;
+	
+	static readonly float totalTeleportDuration = teleportInDuration + teleportOutDuration;
+	static readonly float totalTeleportFrames = teleportInFrames + teleportOutFrames;
 	
 	//[HideInInspector] public bool playerStats.playerMidTeleport = false;
 	[SerializeField] float teleportDistance;
@@ -27,6 +31,8 @@ public class PlayerTeleporting : MonoBehaviour
 	
 	[SerializeField] GameObject teleportSpriteMaskPrefab;
 	GameObject teleportSpriteMask;
+	[SerializeField] GameObject teleportEffectPrefab;
+	GameObject teleportEffect;
 	
 	
     void Start()
@@ -104,31 +110,39 @@ public class PlayerTeleporting : MonoBehaviour
 			}
 		}
 
-		anim.SetBool("isTeleporting", playerStats.playerMidTeleport);
+		
     }
 
 	IEnumerator Teleport()
 	{
 		playerStats.playerQueuingTeleport = false;
-		playerStats.playerCanDash = false;
-		playerStats.ResetPlayerDashCooldown();
+		
 		playerStats.playerMidTeleport = true;
-		playerStats.playerCanMove = false;
+		
 		
 		teleportSpriteMask = Instantiate(teleportSpriteMaskPrefab, transform.position, transform.rotation);
 		teleportSpriteMask.transform.parent = gameObject.transform;
 		playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+		teleportEffect = Instantiate(teleportEffectPrefab, transform.position, transform.rotation);
+		teleportEffect.transform.parent = gameObject.transform;
+		StartCoroutine("SpriteMaskAnimation");
 		
-		yield return new WaitForSeconds(secondsUntilTeleport);
+		yield return new WaitForSeconds(teleportInDuration);
+		
+		anim.SetBool("isTeleporting", true);
+		playerStats.playerCanDash = false;
+		playerStats.ResetPlayerDashCooldown();
+		playerStats.playerCanMove = false;
 		
 		playerSpriteRenderer.maskInteraction = SpriteMaskInteraction.None;
 		Destroy(teleportSpriteMask);
+		Destroy(teleportEffect);
 		
 		transform.position = teleportIndicator.transform.position;
 		rb.velocity = new Vector2(Mathf.Abs(teleportHeight)/2 * Mathf.Sign(transform.localScale.x),teleportHeight * 5);
 		RemoveIndicator();
 		
-		yield return new WaitForSeconds(secondsBetweenTeleportAndEnd);
+		yield return new WaitForSeconds(teleportOutDuration);
 		
 		ResetCooldown();
 	}
@@ -136,6 +150,7 @@ public class PlayerTeleporting : MonoBehaviour
 	void ResetCooldown()
 	{
 		playerStats.playerMidTeleport = false;
+		anim.SetBool("isTeleporting", false);
 		playerStats.playerCanMove = true;
 		playerStats.playerCanDash = true;
 	}
@@ -149,12 +164,24 @@ public class PlayerTeleporting : MonoBehaviour
 		playerSpriteRenderer.color = new Color(1f,1f,1f,1f);
 	}
 	
+	// Idk this is just some vibecoded method that makes the SpriteMask's localScale lower linearly until it reaches 0
 	IEnumerator SpriteMaskAnimation()
 	{
-		// The SpriteMask should try to follow the teleport effect animation
-		// How should I code that? 
-		// Should I just eyeball it and hardcode its localScale shrinking?
-		// MAYBE I should take the secondsUntilTeleport variable and have it linearly shrink until it hits 0 at the secondsUntilTeleport mark
-		yield return new WaitForSeconds(0f);
+		Vector3 startScale = teleportSpriteMask.transform.localScale;
+        Vector3 targetScale = Vector3.zero;
+
+        float time = 0f;
+
+        while (time < teleportInDuration)
+        {
+            float t = time / teleportInDuration; // normalized 0 → 1
+            teleportSpriteMask.transform.localScale = Vector3.Lerp(startScale, targetScale, t);
+
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        // ensure exact zero at the end
+        teleportSpriteMask.transform.localScale = targetScale;
 	}
 }
