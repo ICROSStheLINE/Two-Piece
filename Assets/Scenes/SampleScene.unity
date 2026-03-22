@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3147226}
   - component: {fileID: 3147228}
   - component: {fileID: 3147227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door8
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 25520797}
   - component: {fileID: 25520799}
   - component: {fileID: 25520798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door9
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 33750873}
   - component: {fileID: 33750875}
   - component: {fileID: 33750874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door16
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 59023946}
   - component: {fileID: 59023948}
   - component: {fileID: 59023947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door15
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 60982015}
   - component: {fileID: 60982017}
   - component: {fileID: 60982016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door13
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 62436052}
   - component: {fileID: 62436054}
   - component: {fileID: 62436053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door21
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 71176215}
   - component: {fileID: 71176217}
   - component: {fileID: 71176216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door32
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 127063899}
   - component: {fileID: 127063901}
   - component: {fileID: 127063900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door4
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2230,7 +2230,7 @@ GameObject:
   - component: {fileID: 155686983}
   - component: {fileID: 155686985}
   - component: {fileID: 155686984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door25
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2517,7 +2517,7 @@ GameObject:
   - component: {fileID: 253655572}
   - component: {fileID: 253655574}
   - component: {fileID: 253655573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door17
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2647,7 +2647,7 @@ GameObject:
   - component: {fileID: 270840527}
   - component: {fileID: 270840529}
   - component: {fileID: 270840528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door24
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2777,7 +2777,7 @@ GameObject:
   - component: {fileID: 284796784}
   - component: {fileID: 284796783}
   - component: {fileID: 284796782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door8
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -2907,7 +2907,7 @@ GameObject:
   - component: {fileID: 286288556}
   - component: {fileID: 286288558}
   - component: {fileID: 286288557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door13
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -3662,7 +3662,7 @@ GameObject:
   - component: {fileID: 481812083}
   - component: {fileID: 481812082}
   - component: {fileID: 481812081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door11
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -4265,7 +4265,7 @@ GameObject:
   - component: {fileID: 558503654}
   - component: {fileID: 558503656}
   - component: {fileID: 558503655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door13
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -4395,7 +4395,7 @@ GameObject:
   - component: {fileID: 627228496}
   - component: {fileID: 627228498}
   - component: {fileID: 627228497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door14
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -4604,7 +4604,7 @@ GameObject:
   - component: {fileID: 647269370}
   - component: {fileID: 647269372}
   - component: {fileID: 647269371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door2
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -5104,7 +5104,7 @@ GameObject:
   - component: {fileID: 737751850}
   - component: {fileID: 737751852}
   - component: {fileID: 737751851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door8
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -5234,7 +5234,7 @@ GameObject:
   - component: {fileID: 738199408}
   - component: {fileID: 738199410}
   - component: {fileID: 738199409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door5
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -6083,7 +6083,7 @@ GameObject:
   - component: {fileID: 819024649}
   - component: {fileID: 819024651}
   - component: {fileID: 819024650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door2
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -6644,7 +6644,7 @@ GameObject:
   - component: {fileID: 840937309}
   - component: {fileID: 840937311}
   - component: {fileID: 840937310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door7
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -6774,7 +6774,7 @@ GameObject:
   - component: {fileID: 842496080}
   - component: {fileID: 842496082}
   - component: {fileID: 842496081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door7
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -6904,7 +6904,7 @@ GameObject:
   - component: {fileID: 859130338}
   - component: {fileID: 859130340}
   - component: {fileID: 859130339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door28
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -7034,7 +7034,7 @@ GameObject:
   - component: {fileID: 863251682}
   - component: {fileID: 863251684}
   - component: {fileID: 863251683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door4
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -7246,7 +7246,7 @@ GameObject:
   - component: {fileID: 914921965}
   - component: {fileID: 914921967}
   - component: {fileID: 914921966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door22
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -7376,7 +7376,7 @@ GameObject:
   - component: {fileID: 918540969}
   - component: {fileID: 918540971}
   - component: {fileID: 918540970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door20
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -7999,7 +7999,7 @@ GameObject:
   - component: {fileID: 994299578}
   - component: {fileID: 994299580}
   - component: {fileID: 994299579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door19
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -8129,7 +8129,7 @@ GameObject:
   - component: {fileID: 997756145}
   - component: {fileID: 997756147}
   - component: {fileID: 997756146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door26
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -8259,7 +8259,7 @@ GameObject:
   - component: {fileID: 1059606443}
   - component: {fileID: 1059606445}
   - component: {fileID: 1059606444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door11
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -8394,7 +8394,7 @@ GameObject:
   - component: {fileID: 1085993465}
   - component: {fileID: 1085993467}
   - component: {fileID: 1085993466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door3
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9012,7 +9012,7 @@ GameObject:
   - component: {fileID: 1155776210}
   - component: {fileID: 1155776212}
   - component: {fileID: 1155776211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door27
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9142,7 +9142,7 @@ GameObject:
   - component: {fileID: 1163351668}
   - component: {fileID: 1163351670}
   - component: {fileID: 1163351669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door30
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9272,7 +9272,7 @@ GameObject:
   - component: {fileID: 1166093335}
   - component: {fileID: 1166093337}
   - component: {fileID: 1166093336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door2
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9450,7 +9450,7 @@ GameObject:
   - component: {fileID: 1207747531}
   - component: {fileID: 1207747533}
   - component: {fileID: 1207747532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door31
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9580,7 +9580,7 @@ GameObject:
   - component: {fileID: 1232500677}
   - component: {fileID: 1232500679}
   - component: {fileID: 1232500678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door18
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9710,7 +9710,7 @@ GameObject:
   - component: {fileID: 1239974702}
   - component: {fileID: 1239974704}
   - component: {fileID: 1239974703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door23
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -9897,7 +9897,7 @@ GameObject:
   - component: {fileID: 1265478235}
   - component: {fileID: 1265478237}
   - component: {fileID: 1265478236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door6
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -10851,7 +10851,7 @@ GameObject:
   - component: {fileID: 1349191797}
   - component: {fileID: 1349191799}
   - component: {fileID: 1349191798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door5
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -10981,7 +10981,7 @@ GameObject:
   - component: {fileID: 1358283118}
   - component: {fileID: 1358283120}
   - component: {fileID: 1358283119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door4
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -11241,7 +11241,7 @@ GameObject:
   - component: {fileID: 1369210333}
   - component: {fileID: 1369210335}
   - component: {fileID: 1369210334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door7
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -11506,7 +11506,7 @@ GameObject:
   - component: {fileID: 1413350487}
   - component: {fileID: 1413350489}
   - component: {fileID: 1413350488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door2
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -11931,14 +11931,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2729455698978224878, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
-      propertyPath: teleportEffectPrefab
-      value: 
-      objectReference: {fileID: 2873568763145861955, guid: f0ab6ed851e29eb40b293876bd94bcbe, type: 3}
-    - target: {fileID: 2729455698978224878, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
-      propertyPath: teleportSpriteMaskPrefab
-      value: 
-      objectReference: {fileID: 165071023648927547, guid: 359db122a4ce054478d12ec072a14175, type: 3}
     - target: {fileID: 5012311676560863495, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
       propertyPath: m_Name
       value: "b\u028Affy 8"
@@ -11959,7 +11951,7 @@ GameObject:
   - component: {fileID: 1486065372}
   - component: {fileID: 1486065374}
   - component: {fileID: 1486065373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door6
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -12390,7 +12382,7 @@ GameObject:
   - component: {fileID: 1508575292}
   - component: {fileID: 1508575294}
   - component: {fileID: 1508575293}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door33
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -12520,7 +12512,7 @@ GameObject:
   - component: {fileID: 1523348805}
   - component: {fileID: 1523348807}
   - component: {fileID: 1523348806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door6
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -12761,7 +12753,7 @@ GameObject:
   - component: {fileID: 1546575627}
   - component: {fileID: 1546575629}
   - component: {fileID: 1546575628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door12
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -12891,7 +12883,7 @@ GameObject:
   - component: {fileID: 1548858759}
   - component: {fileID: 1548858761}
   - component: {fileID: 1548858760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door11
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -13078,7 +13070,7 @@ GameObject:
   - component: {fileID: 1587368389}
   - component: {fileID: 1587368388}
   - component: {fileID: 1587368387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door9
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -13208,7 +13200,7 @@ GameObject:
   - component: {fileID: 1595762840}
   - component: {fileID: 1595762842}
   - component: {fileID: 1595762841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door14
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -13338,7 +13330,7 @@ GameObject:
   - component: {fileID: 1634220003}
   - component: {fileID: 1634220005}
   - component: {fileID: 1634220004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door6
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -13468,7 +13460,7 @@ GameObject:
   - component: {fileID: 1647649843}
   - component: {fileID: 1647649845}
   - component: {fileID: 1647649844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door3
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -13603,7 +13595,7 @@ GameObject:
   - component: {fileID: 1701004893}
   - component: {fileID: 1701004895}
   - component: {fileID: 1701004894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door12
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -14106,7 +14098,7 @@ GameObject:
   - component: {fileID: 1757161292}
   - component: {fileID: 1757161294}
   - component: {fileID: 1757161293}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door10
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -14859,7 +14851,7 @@ GameObject:
   - component: {fileID: 1844566134}
   - component: {fileID: 1844566136}
   - component: {fileID: 1844566135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door4
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -15280,7 +15272,7 @@ GameObject:
   - component: {fileID: 1860906143}
   - component: {fileID: 1860906145}
   - component: {fileID: 1860906144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door5
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -15524,7 +15516,7 @@ GameObject:
   - component: {fileID: 1874573016}
   - component: {fileID: 1874573018}
   - component: {fileID: 1874573017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door29
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -15784,7 +15776,7 @@ GameObject:
   - component: {fileID: 1888073559}
   - component: {fileID: 1888073561}
   - component: {fileID: 1888073560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door10
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -16215,7 +16207,7 @@ GameObject:
   - component: {fileID: 1951005211}
   - component: {fileID: 1951005213}
   - component: {fileID: 1951005212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door3
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -16687,7 +16679,7 @@ GameObject:
   - component: {fileID: 1993809854}
   - component: {fileID: 1993809853}
   - component: {fileID: 1993809852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door12
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -16899,7 +16891,7 @@ GameObject:
   - component: {fileID: 2014347114}
   - component: {fileID: 2014347116}
   - component: {fileID: 2014347115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door5
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -17159,7 +17151,7 @@ GameObject:
   - component: {fileID: 2051095864}
   - component: {fileID: 2051095866}
   - component: {fileID: 2051095865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door7
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -17419,7 +17411,7 @@ GameObject:
   - component: {fileID: 2088929087}
   - component: {fileID: 2088929086}
   - component: {fileID: 2088929085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door10
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -17809,7 +17801,7 @@ GameObject:
   - component: {fileID: 2141122001}
   - component: {fileID: 2141122003}
   - component: {fileID: 2141122002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door9
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
@@ -18063,6 +18055,10 @@ PrefabInstance:
     - target: {fileID: 8813742859575360543, guid: dab2e901495dbe143bf198e9571edc3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.9797
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893761379213668894, guid: dab2e901495dbe143bf198e9571edc3b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8893761379213668894, guid: dab2e901495dbe143bf198e9571edc3b, type: 3}
       propertyPath: m_TagString

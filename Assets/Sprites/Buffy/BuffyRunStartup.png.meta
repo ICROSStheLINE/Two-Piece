@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab2cf03aa73374e43b82782670044e3c
+guid: ef29c64f8b8399145bf43c16535e793a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BuffyRun_0
+      name: BuffyRunStartup_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6800d0e0ec7be0f40aaad374139480a6
-      internalID: 410340113
+      spriteID: b4813757f8401534dac5c8a9fe38cb8a
+      internalID: 1534505446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRun_1
+      name: BuffyRunStartup_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cce1be9af1504ac45b11e1e23dd589a8
-      internalID: 807054329
+      spriteID: 1b5cab034fa07f942895f96a88828b37
+      internalID: 1592694659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRun_2
+      name: BuffyRunStartup_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a2fcc6344a1fef4693204e6b3a4ecc1
-      internalID: -1724025951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BuffyRun_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 943c681d774c3a040ac24487a3a960cc
-      internalID: 1669067656
+      spriteID: 395b09bea566fcd48a72a15db8d9cc2d
+      internalID: -290454426
       vertices: []
       indices: 
       edges: []
@@ -204,10 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BuffyRun_0: 410340113
-      BuffyRun_1: 807054329
-      BuffyRun_2: -1724025951
-      BuffyRun_3: 1669067656
+      BuffyRunStartup_0: 1534505446
+      BuffyRunStartup_1: 1592694659
+      BuffyRunStartup_2: -290454426
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

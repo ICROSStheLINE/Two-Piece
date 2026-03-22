@@ -139,6 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDistance: 10
   teleportIndicatorPrefab: {fileID: 8190373255487213523, guid: 1f3ce27934014f8489390a675a2de501, type: 3}
+  teleportSpriteMaskPrefab: {fileID: 165071023648927547, guid: 359db122a4ce054478d12ec072a14175, type: 3}
+  teleportEffectPrefab: {fileID: 2873568763145861955, guid: f0ab6ed851e29eb40b293876bd94bcbe, type: 3}
 --- !u!114 &2766070054041254704
 MonoBehaviour:
   m_ObjectHideFlags: 0

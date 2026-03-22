@@ -143,6 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7add9aace64eb6b45a370e80a530c7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activateDialogue: 0
+  potentialDialogue: []
+  textSpeed: 0
+  preDialogueAction: 
+  stopDash: 0
+  postDialogueAction: 
 --- !u!1 &3648073548240660558
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,8 +196,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfDoors: 1
+  gateMustBeClosed: 0
+  gateMustBeOpened: 0
   doorName: Icicle Door
   doorSpeed: 6
+  doorOpeningCondition: 
+  enemyDetectionRadius: 0
+  makeRadiusWide: 0
+  dialogueWhenDoorOpens: 0
+  potentialDialogue: []
+  textSpeed: 0
+  preDialogueAction: 
+  postDialogueAction: 
 --- !u!1 &8893761379213668894
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +219,7 @@ GameObject:
   - component: {fileID: 8092697441277774235}
   - component: {fileID: 4216965396971233379}
   - component: {fileID: 3177616206198252243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Icicle Door1
   m_TagString: Floor or Wall
   m_Icon: {fileID: 0}
