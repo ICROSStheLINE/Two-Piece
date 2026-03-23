@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 	}
-	
+
 	void BeginMovement()
 	{
 		// P.S. Don't combine transform.position with rigidbody stuff LOL
@@ -65,12 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
 		force = 0;
 	}
-	
+
 	void CheckIfFallingAndAnimateAccordingly()
 	{
 		anim.SetFloat("verticalVelocity", Mathf.Abs(rb.velocity.y));
 		
-		if ((playerStats.playerIsDashing) || (playerStats.playerMidGravityShift) || (playerStats.playerMidTeleport) || (playerStats.playerMidShielding))
-			anim.SetFloat("verticalVelocity", 0f);
+		//if ((playerStats.playerIsDashing) || (playerStats.playerMidGravityShift) || (playerStats.playerMidTeleport) || (playerStats.playerMidShielding))
+			//anim.SetFloat("verticalVelocity", 0f);
 	}
 }

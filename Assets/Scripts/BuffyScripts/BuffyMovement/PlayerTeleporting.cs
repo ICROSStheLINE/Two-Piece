@@ -16,9 +16,17 @@ public class PlayerTeleporting : MonoBehaviour
 	static readonly float teleportOutDurationSpeedMultiplier = 1.5f;
 	static readonly float teleportOutDuration = 0.417f / teleportOutDurationSpeedMultiplier;
 	static readonly float teleportOutFrames = 5f;
+	static readonly float teleportOutFrameDuration = teleportOutDuration / teleportOutFrames;
+	
+	static readonly float teleportOutAirDurationSpeedMultiplier = 1.5f;
+	static readonly float teleportOutAirDuration = 0.5f / teleportOutAirDurationSpeedMultiplier;
+	static readonly float teleportOutAirFrames = 6f;
 	
 	static readonly float totalTeleportDuration = teleportInDuration + teleportOutDuration;
 	static readonly float totalTeleportFrames = teleportInFrames + teleportOutFrames;
+	
+	static readonly float totalTeleportAirDuration = teleportInDuration + teleportOutFrameDuration + teleportOutAirDuration;
+	static readonly float totalTeleportAirFrames = teleportInFrames + 1f + teleportOutAirFrames;
 	
 	//[HideInInspector] public bool playerStats.playerMidTeleport = false;
 	[SerializeField] float teleportDistance;
@@ -142,7 +150,15 @@ public class PlayerTeleporting : MonoBehaviour
 		rb.velocity = new Vector2(Mathf.Abs(teleportHeight)/2 * Mathf.Sign(transform.localScale.x),teleportHeight * 5);
 		RemoveIndicator();
 		
-		yield return new WaitForSeconds(teleportOutDuration);
+		yield return new WaitForSeconds(teleportOutFrameDuration);
+		
+		// This part basically just lets the first frame pass, then checks to see if the player is in mid-air or not.
+		// If the player's in mid-air it just sets the animation duration to that of the mid-air teleport animation.
+		
+		if (anim.GetFloat("verticalVelocity") > 10)
+			yield return new WaitForSeconds(teleportOutAirDuration - teleportOutFrameDuration);
+		else
+			yield return new WaitForSeconds(teleportOutDuration - teleportOutFrameDuration);
 		
 		ResetCooldown();
 	}
