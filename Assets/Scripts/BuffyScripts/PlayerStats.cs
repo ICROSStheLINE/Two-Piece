@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour
 	public KeyCode leechBlastKey = KeyCode.L;
 	public KeyCode orbShieldKey = KeyCode.N;
 	public KeyCode interactKey = KeyCode.Space;
+	public KeyCode sprintKey = KeyCode.V;
 	
 	
 	

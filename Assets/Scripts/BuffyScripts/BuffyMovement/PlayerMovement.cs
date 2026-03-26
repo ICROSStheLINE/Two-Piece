@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
 		
 		CheckIfFallingAndAnimateAccordingly();
     }
+	
+	void Update()
+	{
+		CheckForSprintInput();
+	}
 
 	void CheckNormalMovement()
 	{
@@ -68,6 +73,15 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool("isSprinting", playerStats.isSprinting);
 
 		force = 0;
+	}
+	
+	void CheckForSprintInput()
+	{
+		if (playerStats.playerCanMove)
+			if (Input.GetKeyDown(playerStats.sprintKey))
+				playerStats.isSprinting = !playerStats.isSprinting;
+		else if (!playerStats.playerCanMove)
+			playerStats.isSprinting = false;
 	}
 
 	void CheckIfFallingAndAnimateAccordingly()
