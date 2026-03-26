@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody2D rb;
 	Animator anim;
 	SpriteRenderer spriteRenderer;
+	PlayerStats playerStats;
 
 	float force = 0f;
 	float playerXScale;
-	PlayerStats playerStats;
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,10 +58,14 @@ public class PlayerMovement : MonoBehaviour
 
 	void BeginMovement()
 	{
+		if (playerStats.isSprinting)
+			force *= playerStats.sprintSpeedMultiplier;
+		
 		// P.S. Don't combine transform.position with rigidbody stuff LOL
 		rb.position += new Vector2(force, 0);
 
 		anim.SetFloat("FORCE", Mathf.Abs(force));
+		anim.SetBool("isSprinting", playerStats.isSprinting);
 
 		force = 0;
 	}
