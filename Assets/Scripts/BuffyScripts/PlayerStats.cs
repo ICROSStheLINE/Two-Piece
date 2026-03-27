@@ -32,33 +32,43 @@ public class PlayerStats : MonoBehaviour
 	
 	static readonly float deathZeroAnimationDurationSpeedMultiplier = 0.5f;
 	static readonly float deathZeroAnimationDuration = 0.75f / deathZeroAnimationDurationSpeedMultiplier;
-	
+
 	[HideInInspector] public bool playerMidActionNoDash = false;
-	[HideInInspector] public bool playerMidTSOAttack = false;
 	
+	// Movement
 	[HideInInspector] public float playerMovementSpeed = 7f;
 	[HideInInspector] public bool playerCanMove = true;
+	[HideInInspector] public bool midCutscene = false;
 	public bool isSprinting = false;
 	public float sprintSpeedMultiplier = 3f;
-	
+
+    // Dash
 	[HideInInspector] public bool playerIsDashing = false;
 	[HideInInspector] public bool playerIsDashingButResets1MillisecondEarlier = false;
 	[HideInInspector] public bool playerCanDash = true;
 	
+	// Gravity Shift
 	[HideInInspector] public bool playerMidGravityShift = false;
 	
+	// Teleport
 	[HideInInspector] public bool playerMidTeleport = false;
 	[HideInInspector] public bool playerQueuingTeleport = false;
 	
+	// Shielding
 	[HideInInspector] public bool playerMidShielding = false;
 	
+	// TSO Stats
+	[HideInInspector] public bool playerMidTSOAttack = false;
+	[HideInInspector] public bool canTSOAttack = true;
+
+	// TSO Kick
 	[HideInInspector] public bool playerMidKickingTSO = false;
 	[HideInInspector] public bool playerMidKickingTSOButForTheCameraGameObject = false;
 	
+	// TSO Leech Blast
 	[HideInInspector] public bool playerMidLeechBlast = false;
 	
-	[HideInInspector] public bool midCutscene = false;
-	
+	// TSO Basic Attack
 	[HideInInspector] public bool isTSOBasicAttacking = false;
 	
 	void Start()
