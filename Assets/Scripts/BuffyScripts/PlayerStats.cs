@@ -39,8 +39,8 @@ public class PlayerStats : MonoBehaviour
 	[HideInInspector] public float playerMovementSpeed = 7f;
 	[HideInInspector] public bool playerCanMove = true;
 	[HideInInspector] public bool midCutscene = false;
-	public bool isSprinting = false;
-	public float sprintSpeedMultiplier = 3f;
+	[HideInInspector] public bool isSprinting = false;
+	[HideInInspector] public float sprintSpeedMultiplier = 3f;
 
     // Dash
 	[HideInInspector] public bool playerIsDashing = false;
