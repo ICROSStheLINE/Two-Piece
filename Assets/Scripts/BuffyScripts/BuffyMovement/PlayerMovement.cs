@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool("isSprinting", playerStats.isSprinting);
 
 		force = 0;
+
+		playerStats.isMoving = force != 0;
 	}
 	
 	void CheckForSprintInput()

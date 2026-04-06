@@ -37,6 +37,7 @@ public class PlayerStats : MonoBehaviour
 	
 	// Movement
 	[HideInInspector] public float playerMovementSpeed = 7f;
+	[HideInInspector] public bool isMoving = false;
 	[HideInInspector] public bool playerCanMove = true;
 	[HideInInspector] public bool midCutscene = false;
 	[HideInInspector] public bool isSprinting = false;

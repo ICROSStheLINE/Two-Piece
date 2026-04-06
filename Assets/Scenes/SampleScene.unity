@@ -5093,6 +5093,23 @@ MonoBehaviour:
   stopDash: 1
   postDialogueAction: Save Game
   movementSpeed: 0.1
+--- !u!1 &702029107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5012311676560863495, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
+  m_PrefabInstance: {fileID: 1467551161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &702029123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702029107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fd7a80dd722e142a1e62b78cf1c162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737751849
 GameObject:
   m_ObjectHideFlags: 0
@@ -11938,7 +11955,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5012311676560863495, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
+      insertIndex: 11
+      addedObject: {fileID: 702029123}
   m_SourcePrefab: {fileID: 100100000, guid: 695eb9862c3c41545b7825c364ea0b95, type: 3}
 --- !u!1 &1486065371
 GameObject:
