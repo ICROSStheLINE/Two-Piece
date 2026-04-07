@@ -9,11 +9,15 @@ public class TSOBasicAttack : MonoBehaviour
 	Animator anim;
 	PlayerStats playerStats;
 
-	static readonly float attackAnimationDurationSpeedMultiplier = 1.5f;
-	static readonly float attackAnimationDuration = 1f / attackAnimationDurationSpeedMultiplier;
-	static readonly float attackAnimationFrames = 12;
-	static readonly float attackHitboxSpawn = (4 / attackAnimationFrames) * attackAnimationDuration;
-	static readonly float attackHitboxDespawn = (7 / attackAnimationFrames) * attackAnimationDuration;
+	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1.5f;
+	static readonly float attackAnimationDurationStageOne = 1f / attackAnimationDurationSpeedMultiplierStageOne;
+	static readonly float attackAnimationFramesStageOne = 12;
+	static readonly float attackHitboxSpawnStageOne = (4 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
+	static readonly float attackHitboxDespawnStageOne = (7 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
+	static readonly float attackOffCooldownStageOne = (8 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
+	static readonly float secondsBetweenAttackHitboxDespawnAndSpawnStageOne = Mathf.Abs(attackHitboxDespawnStageOne - attackHitboxSpawnStageOne);
+	static readonly float secondsBetweenDespawnAndOffCooldownStageOne = Mathf.Abs(attackOffCooldownStageOne - attackHitboxDespawnStageOne);
+	static readonly float secondsBetweenOffCooldownAndEndStageOne = Mathf.Abs(attackAnimationDurationStageOne - attackOffCooldownStageOne);
 
 	bool isTSOBasicAttackOnCooldown = false;
 
@@ -28,14 +32,26 @@ public class TSOBasicAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
 		{
-			anim.SetBool("basicAttacking", true);
-			playerStats.isTSOBasicAttacking = true;
-			isTSOBasicAttackOnCooldown = true;
-			Invoke("SpawnHitbox", attackHitboxSpawn);
-			Invoke("DespawnHitbox", attackHitboxDespawn);
-			Invoke("ResetAttackCooldown", attackAnimationDuration);
+			StartCoroutine("StageOne");
 		}
+		// if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
     }
+
+	IEnumerator StageOne()
+	{
+		anim.SetBool("basicAttacking", true);
+		playerStats.isTSOBasicAttacking = true;
+		isTSOBasicAttackOnCooldown = true;
+		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
+		SpawnHitbox();
+		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageOne);
+		DespawnHitbox();
+		yield return new WaitForSeconds(secondsBetweenDespawnAndOffCooldownStageOne);
+		isTSOBasicAttackOnCooldown = false;
+		yield return new WaitForSeconds(secondsBetweenOffCooldownAndEndStageOne);
+		playerStats.isTSOBasicAttacking = false;
+		anim.SetBool("basicAttacking", false);
+	}
 
 	void SpawnHitbox()
 	{
@@ -48,12 +64,5 @@ public class TSOBasicAttack : MonoBehaviour
 	{
 		GameObject existingHitbox = gameObject.transform.GetChild(0).gameObject;
 		Destroy(existingHitbox);
-	}
-
-	void ResetAttackCooldown()
-	{
-		playerStats.isTSOBasicAttacking = false;
-		isTSOBasicAttackOnCooldown = false;
-		anim.SetBool("basicAttacking", false);
 	}
 }
