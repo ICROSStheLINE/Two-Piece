@@ -8,8 +8,9 @@ public class TSOBasicAttack : MonoBehaviour
 	GameObject player;
 	Animator anim;
 	PlayerStats playerStats;
+	PlayerTSOBasicAttack playerTSOBasicAttack;
 
-	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1.5f;
+	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1f;
 	static readonly float attackAnimationDurationStageOne = 1f / attackAnimationDurationSpeedMultiplierStageOne;
 	static readonly float attackAnimationFramesStageOne = 12;
 	static readonly float attackHitboxSpawnStageOne = (4 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
@@ -26,6 +27,7 @@ public class TSOBasicAttack : MonoBehaviour
 		player = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
 		playerStats = player.GetComponent<PlayerStats>();
+		playerTSOBasicAttack = player.GetComponent<PlayerTSOBasicAttack>();
     }
 
     void Update()
@@ -33,8 +35,13 @@ public class TSOBasicAttack : MonoBehaviour
         if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
 		{
 			StartCoroutine("StageOne");
+			playerTSOBasicAttack.TriggerPlayerAnimation();
 		}
-		// if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
+		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
+		{
+			// StopCoroutine("StageOne");
+			// StartCoroutine("StageTwo");
+		}
     }
 
 	IEnumerator StageOne()

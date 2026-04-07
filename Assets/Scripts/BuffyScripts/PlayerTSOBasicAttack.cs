@@ -7,7 +7,7 @@ public class PlayerTSOBasicAttack : MonoBehaviour
     Animator anim;
 	PlayerStats playerStats;
 
-    static readonly float animationDurationSpeedMultiplierStageOne = 1.5f;
+    static readonly float animationDurationSpeedMultiplierStageOne = 1f;
 	static readonly float animationDurationStageOne = 1f / animationDurationSpeedMultiplierStageOne;
 	// static readonly float animationFramesStageOne = 12f;
 
@@ -20,6 +20,11 @@ public class PlayerTSOBasicAttack : MonoBehaviour
     }
 
     void Update()
+    {
+        
+    }
+
+    public void TriggerPlayerAnimation()
     {
         if (playerStats.isTSOBasicAttacking && !midAnimation) // If he is basic attacking,
         {
