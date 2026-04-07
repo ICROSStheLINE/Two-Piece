@@ -10,7 +10,7 @@ public class TSOBasicAttack : MonoBehaviour
 	PlayerStats playerStats;
 
 	static readonly float attackAnimationDurationSpeedMultiplier = 1.5f;
-	static readonly float attackAnimationDuration = 0.917f / attackAnimationDurationSpeedMultiplier;
+	static readonly float attackAnimationDuration = 1f / attackAnimationDurationSpeedMultiplier;
 	static readonly float attackAnimationFrames = 12;
 	static readonly float attackHitboxSpawn = (4 / attackAnimationFrames) * attackAnimationDuration;
 	static readonly float attackHitboxDespawn = (7 / attackAnimationFrames) * attackAnimationDuration;
