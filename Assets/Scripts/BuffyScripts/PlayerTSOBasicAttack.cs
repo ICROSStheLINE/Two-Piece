@@ -10,8 +10,12 @@ public class PlayerTSOBasicAttack : MonoBehaviour
     static readonly float animationDurationSpeedMultiplierStageOne = 1f;
 	static readonly float animationDurationStageOne = 1f / animationDurationSpeedMultiplierStageOne;
 	// static readonly float animationFramesStageOne = 12f;
+    static readonly float animationDurationSpeedMultiplierStageTwo = 1f;
+    static readonly float animationDurationStageTwo = 1f / animationDurationSpeedMultiplierStageTwo;
+    // static readonly float animationFramesStageTwo = 12f;
 
     bool midAnimation = false;
+    Coroutine attackCoroutine;
 
     void Start()
     {
@@ -24,13 +28,14 @@ public class PlayerTSOBasicAttack : MonoBehaviour
         
     }
 
-    public void TriggerPlayerAnimation()
+    public void TriggerPlayerAnimation(string stage)
     {
-        if (playerStats.isTSOBasicAttacking && !midAnimation) // If he is basic attacking,
+        if (playerStats.isTSOBasicAttacking) // If he is basic attacking,
         {
             if (!playerStats.isSprinting) // Check if he's sprinting or not. If he isn't...
             {
-                StartCoroutine("StageOne");
+                if (attackCoroutine != null) StopCoroutine(attackCoroutine);
+                attackCoroutine = StartCoroutine(stage);
             }
         }
     }
@@ -43,6 +48,20 @@ public class PlayerTSOBasicAttack : MonoBehaviour
         playerStats.ResetPlayerDashCooldown();
         anim.SetInteger("basicAttackStage", 1); // Make him do the attack hand motions
         yield return new WaitForSeconds(animationDurationStageOne);
+        midAnimation = false;
+        playerStats.playerCanMove = true;
+        playerStats.playerCanDash = true;
+        anim.SetInteger("basicAttackStage", 0);
+    }
+
+    IEnumerator StageTwo()
+    {
+        midAnimation = true;
+        playerStats.playerCanMove = false;
+        playerStats.playerCanDash = false;
+        playerStats.ResetPlayerDashCooldown();
+        anim.SetInteger("basicAttackStage", 2);
+        yield return new WaitForSeconds(animationDurationStageTwo);
         midAnimation = false;
         playerStats.playerCanMove = true;
         playerStats.playerCanDash = true;
