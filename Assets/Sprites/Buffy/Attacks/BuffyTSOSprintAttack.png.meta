@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fc85470e10a89674287e43233c40bd20
+guid: 12d761bfe4f4d7f4ea4d3b930529f621
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BuffyRunAttack_0
+      name: BuffyTSOSprintAttack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029f7d256a973754290c03fc6fbd2cf8
-      internalID: 526994138
+      spriteID: ec39594b1986c3f4a91f987e7ee6c8c6
+      internalID: 1049615434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_1
+      name: BuffyTSOSprintAttack_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1651e8e0eb752e843830329694c76030
-      internalID: 415303533
+      spriteID: dc5af6c8186349345a1cb36474d25ad8
+      internalID: 2140576462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_2
+      name: BuffyTSOSprintAttack_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87a9d76702a87441aa60a8bff247234
-      internalID: -2118881639
+      spriteID: 8d7297704d44d9e43b27c00eed0688ac
+      internalID: -1345581027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_3
+      name: BuffyTSOSprintAttack_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e1f0ebcfc74d1e42b4e4c18a098e6af
-      internalID: -1114037036
+      spriteID: 82d2cef60031fcf44a2333cb32e7dbb4
+      internalID: 986286207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_4
+      name: BuffyTSOSprintAttack_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae430e0f81eb2694bbc5103c25dbd22a
-      internalID: -517845593
+      spriteID: a7299a461b12b744495d15a243aad5ba
+      internalID: 1044437923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_5
+      name: BuffyTSOSprintAttack_5
       rect:
         serializedVersion: 2
         x: 160
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dec9e75a3791ed4f8a0ea1577b57faf
-      internalID: -1433030243
+      spriteID: ed718338d6b1f6a46a0de8c5960b1344
+      internalID: 2074419100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_6
+      name: BuffyTSOSprintAttack_6
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f74c81697a6f3714abc2a455dc4bc807
-      internalID: 853637419
+      spriteID: 928e1ee03597e5c478656a9f5fc2de03
+      internalID: 1449130880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_7
+      name: BuffyTSOSprintAttack_7
       rect:
         serializedVersion: 2
         x: 224
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4309d409ab5e72e449638789a79209a2
-      internalID: -583743088
+      spriteID: d47146c6cb702b54488543331e1ae2fe
+      internalID: -875790160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BuffyRunAttack_8
+      name: BuffyTSOSprintAttack_8
       rect:
         serializedVersion: 2
         x: 256
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba3d6a41ee095414d9bc61db0514c45f
-      internalID: -301550656
+      spriteID: 9964d73a74f808d4790d0cc8f26b7f85
+      internalID: -1674374266
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BuffyRunAttack_0: 526994138
-      BuffyRunAttack_1: 415303533
-      BuffyRunAttack_2: -2118881639
-      BuffyRunAttack_3: -1114037036
-      BuffyRunAttack_4: -517845593
-      BuffyRunAttack_5: -1433030243
-      BuffyRunAttack_6: 853637419
-      BuffyRunAttack_7: -583743088
-      BuffyRunAttack_8: -301550656
+      BuffyTSOSprintAttack_0: 1049615434
+      BuffyTSOSprintAttack_1: 2140576462
+      BuffyTSOSprintAttack_2: -1345581027
+      BuffyTSOSprintAttack_3: 986286207
+      BuffyTSOSprintAttack_4: 1044437923
+      BuffyTSOSprintAttack_5: 2074419100
+      BuffyTSOSprintAttack_6: 1449130880
+      BuffyTSOSprintAttack_7: -875790160
+      BuffyTSOSprintAttack_8: -1674374266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

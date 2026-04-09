@@ -11,7 +11,7 @@ public class TSOBasicAttack : MonoBehaviour
 	PlayerTSOBasicAttack playerTSOBasicAttack;
 
 	// Stage 1
-	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1f;
+	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1.5f;
 	static readonly float attackAnimationDurationStageOne = 1f / attackAnimationDurationSpeedMultiplierStageOne;
 	static readonly float attackAnimationFramesStageOne = 12;
 	static readonly float attackHitboxSpawnStageOne = (4 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
@@ -21,7 +21,7 @@ public class TSOBasicAttack : MonoBehaviour
 	static readonly float secondsBetweenDespawnAndFollowUpWindowStageOne = Mathf.Abs(attackFollowUpWindowStageOne - attackHitboxDespawnStageOne);
 	static readonly float secondsBetweenFollowUpWindowAndEndStageOne = Mathf.Abs(attackAnimationDurationStageOne - attackFollowUpWindowStageOne);
 	// Stage 2
-	static readonly float attackAnimationDurationSpeedMultiplierStageTwo = 1f;
+	static readonly float attackAnimationDurationSpeedMultiplierStageTwo = 1.5f;
 	static readonly float attackAnimationDurationStageTwo = 1f / attackAnimationDurationSpeedMultiplierStageTwo;
 	static readonly float attackAnimationFramesStageTwo = 12;
 	static readonly float attackHitboxSpawnStageTwo = (4 / attackAnimationFramesStageTwo) * attackAnimationDurationStageTwo;
@@ -29,6 +29,7 @@ public class TSOBasicAttack : MonoBehaviour
 	static readonly float secondsBetweenAttackHitboxDespawnAndSpawnStageTwo = Mathf.Abs(attackHitboxDespawnStageTwo - attackHitboxSpawnStageTwo);
 	static readonly float secondsBetweenDespawnAndEndStageTwo = Mathf.Abs(attackAnimationDurationStageTwo - attackHitboxDespawnStageTwo);
 	bool followUpWindow = false;
+	Coroutine attackCoroutine;
 
     void Start()
     {
@@ -40,18 +41,25 @@ public class TSOBasicAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !followUpWindow)
+		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isSprinting)
 		{
-			StartCoroutine("StageOne");
+			playerTSOBasicAttack.TriggerPlayerAnimation("SprintAttack");
+		}
+        else if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !followUpWindow)
+		{
+			attackCoroutine = StartCoroutine("StageOne");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageOne");
 		}
-		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && followUpWindow)
+		else if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && followUpWindow)
 		{
-			StopCoroutine("StageOne");
-			StartCoroutine("StageTwo");
+			if (attackCoroutine != null) StopCoroutine(attackCoroutine);
+			attackCoroutine = StartCoroutine("StageTwo");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageTwo");
 		}
     }
+
+	public void StartStageOne()
+		{StartCoroutine("StageOne");}
 
 	IEnumerator StageOne()
 	{
