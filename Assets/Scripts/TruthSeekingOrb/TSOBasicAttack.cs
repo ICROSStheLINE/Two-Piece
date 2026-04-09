@@ -16,10 +16,10 @@ public class TSOBasicAttack : MonoBehaviour
 	static readonly float attackAnimationFramesStageOne = 12;
 	static readonly float attackHitboxSpawnStageOne = (4 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
 	static readonly float attackHitboxDespawnStageOne = (7 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
-	static readonly float attackOffCooldownStageOne = (8 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
+	static readonly float attackFollowUpWindowStageOne = (8 / attackAnimationFramesStageOne) * attackAnimationDurationStageOne;
 	static readonly float secondsBetweenAttackHitboxDespawnAndSpawnStageOne = Mathf.Abs(attackHitboxDespawnStageOne - attackHitboxSpawnStageOne);
-	static readonly float secondsBetweenDespawnAndOffCooldownStageOne = Mathf.Abs(attackOffCooldownStageOne - attackHitboxDespawnStageOne);
-	static readonly float secondsBetweenOffCooldownAndEndStageOne = Mathf.Abs(attackAnimationDurationStageOne - attackOffCooldownStageOne);
+	static readonly float secondsBetweenDespawnAndFollowUpWindowStageOne = Mathf.Abs(attackFollowUpWindowStageOne - attackHitboxDespawnStageOne);
+	static readonly float secondsBetweenFollowUpWindowAndEndStageOne = Mathf.Abs(attackAnimationDurationStageOne - attackFollowUpWindowStageOne);
 	// Stage 2
 	static readonly float attackAnimationDurationSpeedMultiplierStageTwo = 1f;
 	static readonly float attackAnimationDurationStageTwo = 1f / attackAnimationDurationSpeedMultiplierStageTwo;
@@ -28,7 +28,7 @@ public class TSOBasicAttack : MonoBehaviour
 	static readonly float attackHitboxDespawnStageTwo = (7 / attackAnimationFramesStageTwo) * attackAnimationDurationStageTwo;
 	static readonly float secondsBetweenAttackHitboxDespawnAndSpawnStageTwo = Mathf.Abs(attackHitboxDespawnStageTwo - attackHitboxSpawnStageTwo);
 	static readonly float secondsBetweenDespawnAndEndStageTwo = Mathf.Abs(attackAnimationDurationStageTwo - attackHitboxDespawnStageTwo);
-	bool isTSOBasicAttackOnCooldown = false;
+	bool followUpWindow = false;
 
     void Start()
     {
@@ -40,12 +40,12 @@ public class TSOBasicAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
+        if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !followUpWindow)
 		{
 			StartCoroutine("StageOne");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageOne");
 		}
-		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isTSOBasicAttacking && !isTSOBasicAttackOnCooldown)
+		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && followUpWindow)
 		{
 			StopCoroutine("StageOne");
 			StartCoroutine("StageTwo");
@@ -57,29 +57,29 @@ public class TSOBasicAttack : MonoBehaviour
 	{
 		anim.SetInteger("basicAttackStage", 1);
 		playerStats.isTSOBasicAttacking = true;
-		isTSOBasicAttackOnCooldown = true;
 		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
 		SpawnHitbox();
 		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageOne);
 		DespawnHitbox();
-		yield return new WaitForSeconds(secondsBetweenDespawnAndOffCooldownStageOne);
-		isTSOBasicAttackOnCooldown = false;
-		yield return new WaitForSeconds(secondsBetweenOffCooldownAndEndStageOne);
+		yield return new WaitForSeconds(secondsBetweenDespawnAndFollowUpWindowStageOne);
+		followUpWindow = true;
+		yield return new WaitForSeconds(secondsBetweenFollowUpWindowAndEndStageOne);
 		playerStats.isTSOBasicAttacking = false;
 		anim.SetInteger("basicAttackStage", 0);
+		yield return new WaitForSeconds(1f);
+		followUpWindow = false;
 	}
 
 	IEnumerator StageTwo()
 	{
+		followUpWindow = false;
 		anim.SetInteger("basicAttackStage", 2);
 		playerStats.isTSOBasicAttacking = true;
-		isTSOBasicAttackOnCooldown = true;
 		yield return new WaitForSeconds(attackHitboxSpawnStageTwo);
 		SpawnHitbox();
 		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageTwo);
 		DespawnHitbox();
 		yield return new WaitForSeconds(secondsBetweenDespawnAndEndStageTwo);
-		isTSOBasicAttackOnCooldown = false;
 		playerStats.isTSOBasicAttacking = false;
 		anim.SetInteger("basicAttackStage", 0);
 	}

@@ -14,7 +14,6 @@ public class PlayerTSOBasicAttack : MonoBehaviour
     static readonly float animationDurationStageTwo = 1f / animationDurationSpeedMultiplierStageTwo;
     // static readonly float animationFramesStageTwo = 12f;
 
-    bool midAnimation = false;
     Coroutine attackCoroutine;
 
     void Start()
@@ -42,13 +41,11 @@ public class PlayerTSOBasicAttack : MonoBehaviour
 
     IEnumerator StageOne()
     {
-        midAnimation = true;
         playerStats.playerCanMove = false; // Make him not be able to move or turn
         playerStats.playerCanDash = false;
         playerStats.ResetPlayerDashCooldown();
         anim.SetInteger("basicAttackStage", 1); // Make him do the attack hand motions
         yield return new WaitForSeconds(animationDurationStageOne);
-        midAnimation = false;
         playerStats.playerCanMove = true;
         playerStats.playerCanDash = true;
         anim.SetInteger("basicAttackStage", 0);
@@ -56,13 +53,11 @@ public class PlayerTSOBasicAttack : MonoBehaviour
 
     IEnumerator StageTwo()
     {
-        midAnimation = true;
         playerStats.playerCanMove = false;
         playerStats.playerCanDash = false;
         playerStats.ResetPlayerDashCooldown();
         anim.SetInteger("basicAttackStage", 2);
         yield return new WaitForSeconds(animationDurationStageTwo);
-        midAnimation = false;
         playerStats.playerCanMove = true;
         playerStats.playerCanDash = true;
         anim.SetInteger("basicAttackStage", 0);
