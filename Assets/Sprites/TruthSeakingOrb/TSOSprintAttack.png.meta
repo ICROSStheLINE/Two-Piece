@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0d8efdf9d3ebc546acef43ff35f6c02
+guid: 2e47f8e384f801c4f9ffbbde1c6d7c96
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,253 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TSOAttack_0
+      name: TSOSprintAttack_4
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 4
-        height: 30
-      alignment: 9
-      pivot: {x: 0.5, y: 0.8}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2684dc876d807ab40b627ce64ce12e3e
-      internalID: -214896424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TSOAttack_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 0
-        width: 4
-        height: 30
-      alignment: 9
-      pivot: {x: 0.5, y: 0.8}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10a851de47df45a4ab242f25f06ff32f
-      internalID: 74313372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TSOAttack_5
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 0
-        width: 14
-        height: 30
-      alignment: 9
-      pivot: {x: 0.65, y: 0.8}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 587d7d4c718a9c44aaf095e84148eb27
-      internalID: 1919682416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TSOAttack_2
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 10
-        height: 30
-      alignment: 9
-      pivot: {x: 0.82, y: 0.8}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88302408d8c282f43b5bada7a28b787d
-      internalID: -1205359680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TSOAttack_7
-      rect:
-        serializedVersion: 2
-        x: 385
+        x: 235
         y: 0
         width: 9
         height: 30
       alignment: 9
-      pivot: {x: 0.22, y: 0.8}
+      pivot: {x: 0.22, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b4efb0070cc85848a33bc32d95761ec
-      internalID: -1789927564
+      spriteID: 8eb19bb1b96715c42810f66981299781
+      internalID: -117990103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_8
+      name: TSOSprintAttack_5
       rect:
         serializedVersion: 2
-        x: 424
+        x: 274
         y: 0
         width: 14
         height: 30
       alignment: 9
-      pivot: {x: 0.14, y: 0.8}
+      pivot: {x: 0.14, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8685c990d78c3a6419d43f0a38d343bb
-      internalID: 1835437987
+      spriteID: 4c9a14c307c66674a83c329bb7d772b1
+      internalID: -1909164451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_9
+      name: TSOSprintAttack_6
       rect:
         serializedVersion: 2
-        x: 468
+        x: 318
         y: 0
         width: 17
         height: 30
       alignment: 9
-      pivot: {x: 0.12, y: 0.8}
+      pivot: {x: 0.12, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2b113806a2e34b47b663ddaccc5afb3
-      internalID: 424598423
+      spriteID: d0374e7b6fe515f4c8153c8fbe404d5f
+      internalID: 1966683832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_10
+      name: TSOSprintAttack_7
       rect:
         serializedVersion: 2
-        x: 512
+        x: 362
         y: 0
         width: 13
         height: 30
       alignment: 9
-      pivot: {x: 0.16, y: 0.8}
+      pivot: {x: 0.15, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21658b7827c2e354095138bffeb8765c
-      internalID: -502671129
+      spriteID: 26545b32d5c56854f8f56d99e2f1cdc7
+      internalID: 219600842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_11
+      name: TSOSprintAttack_8
       rect:
         serializedVersion: 2
-        x: 562
+        x: 412
         y: 0
         width: 5
         height: 30
       alignment: 9
-      pivot: {x: 0.4, y: 0.8}
+      pivot: {x: 0.4, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622a906c663882e49a5a8297e3840e4b
-      internalID: -1880279821
+      spriteID: 630e0cb32b4ec66439aca09a901df1b2
+      internalID: -1121209526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_3
+      name: TSOSprintAttack_0
       rect:
         serializedVersion: 2
-        x: 165
+        x: 15
         y: 0
         width: 11
         height: 30
       alignment: 9
-      pivot: {x: 0.82, y: 0.8}
+      pivot: {x: 0.81, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f8dd9c8c5dad949982ba48be6b1564
-      internalID: 2057894001
+      spriteID: 4e885597ce5a9594f9b0f81e28dd20b2
+      internalID: -1512818727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_4
+      name: TSOSprintAttack_1
       rect:
         serializedVersion: 2
-        x: 218
+        x: 68
         y: 0
         width: 23
         height: 30
       alignment: 9
-      pivot: {x: 0.93, y: 0.8}
+      pivot: {x: 0.915, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 654e6f87bd9231b40aa6af62af308f0d
-      internalID: -2088525033
+      spriteID: 623f7858318a5244a8b872c636560e66
+      internalID: -923299756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TSOAttack_6
+      name: TSOSprintAttack_2
       rect:
         serializedVersion: 2
-        x: 337
+        x: 133
         y: 0
-        width: 10
+        width: 14
         height: 30
       alignment: 9
-      pivot: {x: 0.2, y: 0.8}
+      pivot: {x: 0.64, y: 0.365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1eb4b905f3b6742ba9d879fe7a581b
-      internalID: -1988497214
+      spriteID: 8286485caad723f48a32ca6af9634f24
+      internalID: 356815349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TSOSprintAttack_3
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 10
+        height: 30
+      alignment: 9
+      pivot: {x: 0.19, y: 0.365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88da5ea8782ee14a9d82037a3433611
+      internalID: 1371348967
       vertices: []
       indices: 
       edges: []
@@ -372,18 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TSOAttack_0: -214896424
-      TSOAttack_1: 74313372
-      TSOAttack_10: -502671129
-      TSOAttack_11: -1880279821
-      TSOAttack_2: -1205359680
-      TSOAttack_3: 2057894001
-      TSOAttack_4: -2088525033
-      TSOAttack_5: 1919682416
-      TSOAttack_6: -1988497214
-      TSOAttack_7: -1789927564
-      TSOAttack_8: 1835437987
-      TSOAttack_9: 424598423
+      TSOSprintAttack_0: -1512818727
+      TSOSprintAttack_1: -923299756
+      TSOSprintAttack_2: 356815349
+      TSOSprintAttack_3: 1371348967
+      TSOSprintAttack_4: -117990103
+      TSOSprintAttack_5: -1909164451
+      TSOSprintAttack_6: 1966683832
+      TSOSprintAttack_7: 219600842
+      TSOSprintAttack_8: -1121209526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

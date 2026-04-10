@@ -58,8 +58,25 @@ public class TSOBasicAttack : MonoBehaviour
 		}
     }
 
-	public void StartStageOne()
-		{StartCoroutine("StageOne");}
+	public void StartSpringStageOne()
+		{StartCoroutine("SprintStageOne");}
+
+	IEnumerator SprintStageOne()
+    {
+        anim.SetInteger("sprintAttackStage", 1);
+		playerStats.isTSOBasicAttacking = true;
+		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
+		SpawnHitbox();
+		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageOne);
+		DespawnHitbox();
+		yield return new WaitForSeconds(secondsBetweenDespawnAndFollowUpWindowStageOne);
+		followUpWindow = true;
+		yield return new WaitForSeconds(secondsBetweenFollowUpWindowAndEndStageOne);
+		playerStats.isTSOBasicAttacking = false;
+		anim.SetInteger("sprintAttackStage", 0);
+		yield return new WaitForSeconds(1f);
+		followUpWindow = false;
+    }
 
 	IEnumerator StageOne()
 	{

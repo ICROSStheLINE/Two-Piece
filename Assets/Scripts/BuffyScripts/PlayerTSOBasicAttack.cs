@@ -15,6 +15,8 @@ public class PlayerTSOBasicAttack : MonoBehaviour
     // static readonly float animationFramesStageTwo = 12f;
     static readonly float animationDurationSpeedMultiplierSprint = 1f;
     static readonly float animationDurationSprint = 0.750f / animationDurationSpeedMultiplierSprint;
+    static readonly float animationFramesSprint = 12f;
+    
 
     Coroutine attackCoroutine;
     GameObject truthSeekingOrb;
@@ -45,11 +47,11 @@ public class PlayerTSOBasicAttack : MonoBehaviour
         playerStats.playerCanDash = false;
         playerStats.isSprinting = false;
         playerStats.ResetPlayerDashCooldown();
-        yield return new WaitForSeconds(animationDurationSprint);
-        // TODO: Make the orb spawn like 1 or 2 frames before the animation finishes.
+        yield return new WaitForSeconds(animationDurationSprint - ((2/animationFramesSprint) * animationDurationSprint)); // orb spawns like 1 or 2 frames before the animation finishes.
         truthSeekingOrb.SetActive(true);
-        truthSeekingOrb.transform.GetComponent<TSOBasicAttack>().StartStageOne();
-        // TODO: Also make the orb spawn a bit forward so it looks like it's getting launched out of buffy's hand
+        truthSeekingOrb.transform.GetComponent<TSOBasicAttack>().StartSpringStageOne();
+        truthSeekingOrb.transform.position = transform.position; // orb spawns a bit forward so it looks like it's getting launched out of buffy's hand
+        yield return new WaitForSeconds((2/animationFramesSprint) * animationDurationSprint);
         anim.SetInteger("sprintAttackStage", 0);
         playerStats.playerCanMove = true;
         playerStats.playerCanDash = true;
