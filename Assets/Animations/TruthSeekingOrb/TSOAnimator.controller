@@ -33,7 +33,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TSOSprintAttack
-  m_Speed: 1
+  m_Speed: 0
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -674213116727904443}
@@ -306,7 +306,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TSOAttack2
-  m_Speed: 1.5
+  m_Speed: 0
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6895808934222680951}

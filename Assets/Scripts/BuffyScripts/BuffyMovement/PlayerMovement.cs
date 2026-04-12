@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			if (Input.GetKey(playerStats.moveRightKey))
 			{
-				force += playerStats.playerMovementSpeed * Time.deltaTime;
+				force += playerStats.playerMovementSpeed;
 				if (!playerStats.playerIsDashingButResets1MillisecondEarlier)
 				{
 					gameObject.transform.localScale = new Vector3(playerXScale,gameObject.transform.localScale.y,playerXScale);
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 			}
 			if (Input.GetKey(playerStats.moveLeftKey))
 			{
-				force -= playerStats.playerMovementSpeed * Time.deltaTime;
+				force -= playerStats.playerMovementSpeed;
 				if (!playerStats.playerIsDashingButResets1MillisecondEarlier)
 				{
 					gameObject.transform.localScale = new Vector3(-playerXScale,gameObject.transform.localScale.y,playerXScale);
@@ -67,14 +67,14 @@ public class PlayerMovement : MonoBehaviour
 			force *= playerStats.sprintSpeedMultiplier;
 		
 		// P.S. Don't combine transform.position with rigidbody stuff LOL
-		rb.position += new Vector2(force, 0);
+		rb.position += new Vector2(force * Time.fixedDeltaTime, 0);
 
 		anim.SetFloat("FORCE", Mathf.Abs(force));
 		anim.SetBool("isSprinting", playerStats.isSprinting);
 
-		force = 0;
-
 		playerStats.isMoving = force != 0;
+
+		force = 0;
 	}
 	
 	void CheckForSprintInput()

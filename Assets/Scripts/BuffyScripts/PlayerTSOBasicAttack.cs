@@ -6,6 +6,7 @@ public class PlayerTSOBasicAttack : MonoBehaviour
 {
     Animator anim;
 	PlayerStats playerStats;
+    Rigidbody2D rb;
 
     static readonly float animationDurationSpeedMultiplierStageOne = 1.5f;
 	static readonly float animationDurationStageOne = 1f / animationDurationSpeedMultiplierStageOne;
@@ -26,6 +27,7 @@ public class PlayerTSOBasicAttack : MonoBehaviour
         anim = GetComponent<Animator>();
         playerStats = GetComponent<PlayerStats>();
         truthSeekingOrb = GameObject.FindWithTag("Truth Seeking Orb");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -41,16 +43,21 @@ public class PlayerTSOBasicAttack : MonoBehaviour
 
     IEnumerator SprintAttack()
     {
+        playerStats.TSOHover = false;
         truthSeekingOrb.SetActive(false);
         anim.SetInteger("sprintAttackStage", 1);
         playerStats.playerCanMove = false;
         playerStats.playerCanDash = false;
         playerStats.isSprinting = false;
         playerStats.ResetPlayerDashCooldown();
-        yield return new WaitForSeconds(animationDurationSprint - ((2/animationFramesSprint) * animationDurationSprint)); // orb spawns like 1 or 2 frames before the animation finishes.
+        for (float secondsPassed = 0; secondsPassed < animationDurationSprint - ((2/animationFramesSprint) * animationDurationSprint); secondsPassed += Time.deltaTime) // orb spawns like 1 or 2 frames before the animation finishes.
+		{
+            rb.position += new Vector2(playerStats.playerMovementSpeed * playerStats.sprintSpeedMultiplier * Mathf.Sign(transform.localScale.x) * Time.deltaTime, 0);
+            yield return null;
+        }
         truthSeekingOrb.SetActive(true);
-        truthSeekingOrb.transform.GetComponent<TSOBasicAttack>().StartSpringStageOne();
-        truthSeekingOrb.transform.position = transform.position; // orb spawns a bit forward so it looks like it's getting launched out of buffy's hand
+        truthSeekingOrb.transform.position = transform.position + new Vector3(Mathf.Sign(transform.localScale.x),0,0); // orb spawns a bit forward so it looks like it's getting launched out of buffy's hand
+        truthSeekingOrb.transform.GetComponent<TSOBasicAttack>().StartSprintStageOne();
         yield return new WaitForSeconds((2/animationFramesSprint) * animationDurationSprint);
         anim.SetInteger("sprintAttackStage", 0);
         playerStats.playerCanMove = true;

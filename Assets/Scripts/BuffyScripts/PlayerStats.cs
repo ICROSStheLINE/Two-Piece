@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
 	[HideInInspector] public bool playerMidActionNoDash = false;
 	
 	// Movement
+	[HideInInspector] public float movementForce = 0;
 	[HideInInspector] public float playerMovementSpeed = 7f;
 	[HideInInspector] public bool isMoving = false;
 	[HideInInspector] public bool playerCanMove = true;
