@@ -9,6 +9,7 @@ public class TSOBasicAttack : MonoBehaviour
 	Animator anim;
 	PlayerStats playerStats;
 	PlayerTSOBasicAttack playerTSOBasicAttack;
+	TrailRenderer trailRenderer;
 
 	// Stage 1
 	static readonly float attackAnimationDurationSpeedMultiplierStageOne = 1.5f;
@@ -39,6 +40,7 @@ public class TSOBasicAttack : MonoBehaviour
         anim = GetComponent<Animator>();
 		playerStats = player.GetComponent<PlayerStats>();
 		playerTSOBasicAttack = player.GetComponent<PlayerTSOBasicAttack>();
+		trailRenderer = GetComponent<TrailRenderer>();
     }
 
     void Update()
@@ -63,6 +65,7 @@ public class TSOBasicAttack : MonoBehaviour
 			if (attackCoroutine != null) StopCoroutine(attackCoroutine);
 			if (movementCoroutine != null) StopCoroutine(movementCoroutine);
 			attackCoroutine = StartCoroutine("StageTwo");
+			movementCoroutine = StartCoroutine("StageTwoMovements");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageTwo");
 		}
 	}
@@ -90,15 +93,17 @@ public class TSOBasicAttack : MonoBehaviour
 		float frameRate = 1f / 100f;
 		int frameIndex = 0;
 		playerStats.TSOHover = false;
+		trailRenderer.emitting = true;
 		yield return new WaitForSeconds(firstFrame);
 		Vector3 simulatedPosition = transform.position;
 		Vector3 attackTarget = new Vector3(player.transform.position.x + Mathf.Sign(player.transform.localScale.x) * 10, transform.position.y, transform.position.z);
 		Vector3 startPos = transform.position;
+		// This for loop makes it follow the parabola on the way there
 		for (float secondsPassed = 0; secondsPassed < attackHitboxDespawnStageOne - firstFrame; secondsPassed += Time.deltaTime)
 		{
 			float t = secondsPassed / (attackHitboxDespawnStageOne - firstFrame);
 			Vector3 axisDir = (attackTarget - startPos).normalized;
-			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward * Mathf.Sign(player.transform.localScale.x)).normalized;
 			Vector3 basePoint = Vector3.Lerp(startPos, attackTarget, t);
 			float height = 1.5f;
 			float offset = 4 * t * (1 - t) * height;
@@ -113,11 +118,12 @@ public class TSOBasicAttack : MonoBehaviour
 		startPos = transform.position;
 		frameIndex = 0;
 		float theRestOfTheAnimationDuration = secondsBetweenDespawnAndFollowUpWindowStageOne + secondsBetweenFollowUpWindowAndEndStageOne - firstFrame;
+		// This for loop makes it follow the parabola on the way back
 		for (float secondsPassed = 0; secondsPassed < theRestOfTheAnimationDuration; secondsPassed += Time.deltaTime)
 		{
 			float t = secondsPassed / theRestOfTheAnimationDuration;
 			Vector3 axisDir = (player.transform.position - startPos).normalized;
-			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward * Mathf.Sign(player.transform.localScale.x)).normalized;
 			Vector3 basePoint = Vector3.Lerp(startPos, player.transform.position, t);
 			float height = 1.5f;
 			float offset = 4 * t * (1 - t) * height;
@@ -130,6 +136,7 @@ public class TSOBasicAttack : MonoBehaviour
 			}
 		}
 		playerStats.TSOHover = true;
+		trailRenderer.emitting = false;
 	}
 
 	IEnumerator StageOne()
@@ -147,6 +154,58 @@ public class TSOBasicAttack : MonoBehaviour
 		anim.SetInteger("basicAttackStage", 0);
 		yield return new WaitForSeconds(1f);
 		followUpWindow = false;
+	}
+
+	IEnumerator StageTwoMovements()
+	{
+		float firstFrame = (1/attackAnimationFramesStageOne) / attackAnimationDurationStageOne;
+		float frameRate = 1f / 100f;
+		int frameIndex = 0;
+		playerStats.TSOHover = false;
+		trailRenderer.emitting = true;
+		yield return new WaitForSeconds(firstFrame);
+		Vector3 simulatedPosition = transform.position;
+		Vector3 attackTarget = new Vector3(player.transform.position.x + Mathf.Sign(player.transform.localScale.x) * 10, transform.position.y, transform.position.z);
+		Vector3 startPos = transform.position;
+		// This for loop makes it follow the parabola on the way there
+		for (float secondsPassed = 0; secondsPassed < attackHitboxDespawnStageOne - firstFrame; secondsPassed += Time.deltaTime)
+		{
+			float t = secondsPassed / (attackHitboxDespawnStageOne - firstFrame);
+			Vector3 axisDir = (attackTarget - startPos).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward * Mathf.Sign(player.transform.localScale.x) * -1f).normalized;
+			Vector3 basePoint = Vector3.Lerp(startPos, attackTarget, t);
+			float height = 1.5f;
+			float offset = 4 * t * (1 - t) * height;
+			simulatedPosition = basePoint + perpDir * offset;
+			yield return null;
+			if (secondsPassed >= frameIndex * frameRate)
+			{
+				transform.position = simulatedPosition;
+				frameIndex++;
+			}
+		}
+		startPos = transform.position;
+		frameIndex = 0;
+		float theRestOfTheAnimationDuration = secondsBetweenDespawnAndFollowUpWindowStageOne + secondsBetweenFollowUpWindowAndEndStageOne - firstFrame;
+		// This for loop makes it follow the parabola on the way back
+		for (float secondsPassed = 0; secondsPassed < theRestOfTheAnimationDuration; secondsPassed += Time.deltaTime)
+		{
+			float t = secondsPassed / theRestOfTheAnimationDuration;
+			Vector3 axisDir = (player.transform.position - startPos).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward * Mathf.Sign(player.transform.localScale.x) * -1f).normalized;
+			Vector3 basePoint = Vector3.Lerp(startPos, player.transform.position, t);
+			float height = 1.5f;
+			float offset = 4 * t * (1 - t) * height;
+			simulatedPosition = basePoint + perpDir * offset;
+			yield return null;
+			if (secondsPassed >= frameIndex * frameRate)
+			{
+				transform.position = simulatedPosition;
+				frameIndex++;
+			}
+		}
+		playerStats.TSOHover = true;
+		trailRenderer.emitting = false;
 	}
 
 	IEnumerator StageTwo()

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2370983627025461980}
   - component: {fileID: 5459521861347824565}
   - component: {fileID: 2200405513769693303}
+  - component: {fileID: 5158803620088887245}
   - component: {fileID: 8742385957568300369}
   - component: {fileID: 5164852619262075037}
   - component: {fileID: 6368917504913613994}
@@ -69,10 +70,14 @@ MonoBehaviour:
   leechBlastKey: 108
   orbShieldKey: 104
   interactKey: 32
+  sprintKey: 118
   playerMidActionNoDash: 0
-  playerMidTSOAttack: 0
   playerMovementSpeed: 7
+  isMoving: 0
   playerCanMove: 1
+  midCutscene: 0
+  isSprinting: 0
+  sprintSpeedMultiplier: 3
   playerIsDashing: 0
   playerIsDashingButResets1MillisecondEarlier: 0
   playerCanDash: 1
@@ -80,10 +85,12 @@ MonoBehaviour:
   playerMidTeleport: 0
   playerQueuingTeleport: 0
   playerMidShielding: 0
+  playerMidTSOAttack: 0
+  canTSOAttack: 1
+  TSOHover: 1
   playerMidKickingTSO: 0
   playerMidKickingTSOButForTheCameraGameObject: 0
   playerMidLeechBlast: 0
-  midCutscene: 0
   isTSOBasicAttacking: 0
 --- !u!114 &2676003556141346702
 MonoBehaviour:
@@ -204,6 +211,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c432f677836a04141adb3d6dd5855bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5158803620088887245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012311676560863495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fd7a80dd722e142a1e62b78cf1c162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &8742385957568300369
