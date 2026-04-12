@@ -61,6 +61,7 @@ public class PlayerStats : MonoBehaviour
 	// TSO Stats
 	[HideInInspector] public bool playerMidTSOAttack = false;
 	[HideInInspector] public bool canTSOAttack = true;
+	[HideInInspector] public bool TSOHover = true;
 
 	// TSO Kick
 	[HideInInspector] public bool playerMidKickingTSO = false;

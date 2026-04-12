@@ -20,7 +20,7 @@ public class TSOHoverScript : MonoBehaviour
 
     void FixedUpdate()
     {
-		if (playerStats.isTSOBasicAttacking == false)
+		if (playerStats.TSOHover)
         {
 			// (If player is attacking, don't switch the direction of the orb, or else it'll switch the direction of its attack mid-way)
 			CheckWherePlayerFacing();

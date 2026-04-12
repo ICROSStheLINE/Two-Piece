@@ -30,6 +30,8 @@ public class TSOBasicAttack : MonoBehaviour
 	static readonly float secondsBetweenDespawnAndEndStageTwo = Mathf.Abs(attackAnimationDurationStageTwo - attackHitboxDespawnStageTwo);
 	bool followUpWindow = false;
 	Coroutine attackCoroutine;
+	Coroutine movementCoroutine;
+	
 
     void Start()
     {
@@ -41,6 +43,11 @@ public class TSOBasicAttack : MonoBehaviour
 
     void Update()
     {
+		CheckForAttackInput();
+    }
+
+	void CheckForAttackInput()
+	{
 		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isSprinting)
 		{
 			playerTSOBasicAttack.TriggerPlayerAnimation("SprintAttack");
@@ -48,18 +55,17 @@ public class TSOBasicAttack : MonoBehaviour
         else if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && !playerStats.isTSOBasicAttacking && !followUpWindow)
 		{
 			attackCoroutine = StartCoroutine("StageOne");
+			movementCoroutine = StartCoroutine("StageOneMovements");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageOne");
 		}
 		else if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && followUpWindow)
 		{
 			if (attackCoroutine != null) StopCoroutine(attackCoroutine);
+			if (movementCoroutine != null) StopCoroutine(movementCoroutine);
 			attackCoroutine = StartCoroutine("StageTwo");
 			playerTSOBasicAttack.TriggerPlayerAnimation("StageTwo");
 		}
-    }
-
-	public void StartSpringStageOne()
-		{StartCoroutine("SprintStageOne");}
+	}
 
 	IEnumerator SprintStageOne()
     {
@@ -77,6 +83,54 @@ public class TSOBasicAttack : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		followUpWindow = false;
     }
+
+	IEnumerator StageOneMovements()
+	{
+		float firstFrame = (1/attackAnimationFramesStageOne) / attackAnimationDurationStageOne;
+		float frameRate = 1f / 100f;
+		int frameIndex = 0;
+		playerStats.TSOHover = false;
+		yield return new WaitForSeconds(firstFrame);
+		Vector3 simulatedPosition = transform.position;
+		Vector3 attackTarget = new Vector3(player.transform.position.x + Mathf.Sign(player.transform.localScale.x) * 10, transform.position.y, transform.position.z);
+		Vector3 startPos = transform.position;
+		for (float secondsPassed = 0; secondsPassed < attackHitboxDespawnStageOne - firstFrame; secondsPassed += Time.deltaTime)
+		{
+			float t = secondsPassed / (attackHitboxDespawnStageOne - firstFrame);
+			Vector3 axisDir = (attackTarget - startPos).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward).normalized;
+			Vector3 basePoint = Vector3.Lerp(startPos, attackTarget, t);
+			float height = 1.5f;
+			float offset = 4 * t * (1 - t) * height;
+			simulatedPosition = basePoint + perpDir * offset;
+			yield return null;
+			if (secondsPassed >= frameIndex * frameRate)
+			{
+				transform.position = simulatedPosition;
+				frameIndex++;
+			}
+		}
+		startPos = transform.position;
+		frameIndex = 0;
+		float theRestOfTheAnimationDuration = secondsBetweenDespawnAndFollowUpWindowStageOne + secondsBetweenFollowUpWindowAndEndStageOne - firstFrame;
+		for (float secondsPassed = 0; secondsPassed < theRestOfTheAnimationDuration; secondsPassed += Time.deltaTime)
+		{
+			float t = secondsPassed / theRestOfTheAnimationDuration;
+			Vector3 axisDir = (player.transform.position - startPos).normalized;
+			Vector3 perpDir = Vector3.Cross(axisDir, Vector3.forward).normalized;
+			Vector3 basePoint = Vector3.Lerp(startPos, player.transform.position, t);
+			float height = 1.5f;
+			float offset = 4 * t * (1 - t) * height;
+			simulatedPosition = basePoint + perpDir * offset;
+			yield return null;
+			if (secondsPassed >= frameIndex * frameRate)
+			{
+				transform.position = simulatedPosition;
+				frameIndex++;
+			}
+		}
+		playerStats.TSOHover = true;
+	}
 
 	IEnumerator StageOne()
 	{
@@ -111,7 +165,7 @@ public class TSOBasicAttack : MonoBehaviour
 
 	void SpawnHitbox()
 	{
-		GameObject referenceObject = Instantiate(theHitbox, gameObject.transform.position + new Vector3(2.5f * Mathf.Sign(gameObject.transform.localScale.x),-1f * Mathf.Sign(gameObject.transform.localScale.y),0), gameObject.transform.rotation);
+		GameObject referenceObject = Instantiate(theHitbox, transform.GetComponent<Renderer>().bounds.center, gameObject.transform.rotation);
 		referenceObject.transform.parent = gameObject.transform;
 		referenceObject.transform.localScale += new Vector3(2.5f * Mathf.Sign(gameObject.transform.localScale.x),2 * Mathf.Sign(gameObject.transform.localScale.y),0);
 	}
@@ -120,5 +174,10 @@ public class TSOBasicAttack : MonoBehaviour
 	{
 		GameObject existingHitbox = gameObject.transform.GetChild(0).gameObject;
 		Destroy(existingHitbox);
+	}
+
+	public void StartSpringStageOne()
+	{
+		StartCoroutine("SprintStageOne");
 	}
 }
