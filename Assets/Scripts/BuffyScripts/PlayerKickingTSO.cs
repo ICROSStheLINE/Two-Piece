@@ -41,7 +41,7 @@ public class PlayerKickingTSO : MonoBehaviour
     void Update()
     {
 		// Kick out ball
-        if ((Input.GetKeyDown(playerStats.orbKickKey)) && !playerStats.playerMidActionNoDash && !playerStats.midCutscene && !playerStats.isTSOBasicAttacking && (anim.GetFloat("verticalVelocity") == 0f) && (!ableToTeleport))
+        if (true == false && (Input.GetKeyDown(playerStats.orbKickKey)) && !playerStats.playerMidActionNoDash && !playerStats.midCutscene && !playerStats.isTSOBasicAttacking && (anim.GetFloat("verticalVelocity") == 0f) && (!ableToTeleport))
 		{
 			Destroy(truthSeekingOrb);
 			

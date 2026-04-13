@@ -50,7 +50,7 @@ public class TSOBasicAttack : MonoBehaviour
 
 	void CheckForAttackInput()
 	{
-		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isSprinting)
+		if (Input.GetKeyDown(playerStats.basicAttackKey) && playerStats.canTSOAttack && playerStats.isSprinting && playerStats.isMoving)
 		{
 			playerTSOBasicAttack.TriggerPlayerAnimation("SprintAttack");
 		}
@@ -77,7 +77,7 @@ public class TSOBasicAttack : MonoBehaviour
 		playerStats.TSOHover = false;
 		trailRenderer.emitting = true;
 		Vector3 simulatedPosition = transform.position;
-		Vector3 attackTarget = new Vector3(player.transform.position.x + Mathf.Sign(player.transform.localScale.x) * 10, transform.position.y, transform.position.z);
+		Vector3 attackTarget = new Vector3(player.transform.position.x + Mathf.Sign(player.transform.localScale.x) * 5, transform.position.y, transform.position.z);
 		Vector3 startPos = transform.position;
 		// This for loop makes it follow the parabola on the way there
 		for (float secondsPassed = 0; secondsPassed < attackHitboxDespawnStageOne; secondsPassed += Time.deltaTime)
@@ -124,11 +124,13 @@ public class TSOBasicAttack : MonoBehaviour
     {
         anim.SetInteger("sprintAttackStage", 1);
 		playerStats.isTSOBasicAttacking = true;
-		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
 		SpawnHitbox();
+		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
+		
 		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageOne);
-		DespawnHitbox();
+		
 		yield return new WaitForSeconds(secondsBetweenDespawnAndFollowUpWindowStageOne);
+		DespawnHitbox();
 		followUpWindow = true;
 		yield return new WaitForSeconds(secondsBetweenFollowUpWindowAndEndStageOne);
 		playerStats.isTSOBasicAttacking = false;
@@ -193,11 +195,13 @@ public class TSOBasicAttack : MonoBehaviour
 	{
 		anim.SetInteger("basicAttackStage", 1);
 		playerStats.isTSOBasicAttacking = true;
-		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
 		SpawnHitbox();
+		yield return new WaitForSeconds(attackHitboxSpawnStageOne);
+		
 		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageOne);
-		DespawnHitbox();
+		
 		yield return new WaitForSeconds(secondsBetweenDespawnAndFollowUpWindowStageOne);
+		DespawnHitbox();
 		followUpWindow = true;
 		yield return new WaitForSeconds(secondsBetweenFollowUpWindowAndEndStageOne);
 		playerStats.isTSOBasicAttacking = false;
@@ -263,18 +267,20 @@ public class TSOBasicAttack : MonoBehaviour
 		followUpWindow = false;
 		anim.SetInteger("basicAttackStage", 2);
 		playerStats.isTSOBasicAttacking = true;
-		yield return new WaitForSeconds(attackHitboxSpawnStageTwo);
 		SpawnHitbox();
+		yield return new WaitForSeconds(attackHitboxSpawnStageTwo);
+		
 		yield return new WaitForSeconds(secondsBetweenAttackHitboxDespawnAndSpawnStageTwo);
-		DespawnHitbox();
+		
 		yield return new WaitForSeconds(secondsBetweenDespawnAndEndStageTwo);
+		DespawnHitbox();
 		playerStats.isTSOBasicAttacking = false;
 		anim.SetInteger("basicAttackStage", 0);
 	}
 
 	void SpawnHitbox()
 	{
-		GameObject referenceObject = Instantiate(theHitbox, transform.GetComponent<Renderer>().bounds.center, gameObject.transform.rotation);
+		GameObject referenceObject = Instantiate(theHitbox, transform.position, transform.rotation);
 		referenceObject.transform.parent = gameObject.transform;
 		referenceObject.transform.localScale += new Vector3(2.5f * Mathf.Sign(gameObject.transform.localScale.x),2 * Mathf.Sign(gameObject.transform.localScale.y),0);
 	}
